@@ -4,12 +4,12 @@
   "description": "Hide sport news from major newspaper websites",
   "content_scripts": [
     {
-      "matches": ["http://corriere.it/*", "http://www.corriere.it/*"],
+      "matches": ["http://*.corriere.it/*" ],
       "run_at": "document_end",
       "js": ["jquery.js", "filter_corriere.js"]
     },
     {
-      "matches": ["http://repubblica.it/*", "http://www.repubblica.it/*"],
+      "matches": ["http://*.repubblica.it/*" ],
       "run_at": "document_end",
       "js": ["jquery.js", "filter_repubblica.js"]
     }
