@@ -1,0 +1,17 @@
+{
+  "name": "No Sport",
+  "version": "0.1",
+  "description": "Hide sport news from major newspaper websites",
+  "content_scripts": [
+    {
+      "matches": ["http://corriere.it/*", "http://www.corriere.it/*"],
+      "run_at": "document_end",
+      "js": ["jquery.js", "filter_corriere.js"]
+    },
+    {
+      "matches": ["http://repubblica.it/*", "http://www.repubblica.it/*"],
+      "run_at": "document_end",
+      "js": ["jquery.js", "filter_repubblica.js"]
+    }
+  ]
+}
