@@ -1,6 +1,6 @@
 var item = $("#dirette-dashboard");
-if (item) {
-	console.log("removing sport header from repubblica.it");
+if (item && item.length > 0) {
 	item.hide();
+	chrome.extension.sendRequest({"message": "Content hidden from repubblica.it"});
 }
 

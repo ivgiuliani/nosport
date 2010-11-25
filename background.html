@@ -1,0 +1,23 @@
+<html>
+  <script>
+    function notification(message) {
+      var notification = webkitNotifications.createNotification(
+        chrome.extension.getURL("icon.jpg"),
+        "No Sport!", message
+      );
+      notification.show();
+
+      setTimeout(function() {
+        notification.cancel();
+      }, 3 * 1000);
+    };
+
+    chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
+      console.log(request);
+      if (request.message) {
+        notification(request.message);
+      }
+    });
+  </script>
+</html>

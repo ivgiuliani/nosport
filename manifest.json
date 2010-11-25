@@ -2,16 +2,20 @@
   "name": "No Sport",
   "version": "0.1",
   "description": "Hide sport news from major newspaper websites",
+  "permissions": [ "notifications" ],
+  "background_page": "background.html",
   "content_scripts": [
     {
       "matches": ["http://*.corriere.it/*" ],
-      "run_at": "document_end",
       "js": ["jquery.js", "filter_corriere.js"]
     },
     {
       "matches": ["http://*.repubblica.it/*" ],
-      "run_at": "document_end",
       "js": ["jquery.js", "filter_repubblica.js"]
+    },
+    {
+      "matches": ["http://*.ansa.it/*" ],
+      "js": ["jquery.js", "filter_ansa.js"]
     }
   ]
 }
