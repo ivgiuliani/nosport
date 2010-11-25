@@ -2,6 +2,7 @@
   "name": "No Sport",
   "version": "0.1",
   "description": "Hide sport news from major newspaper websites",
+  "icons": { "48": "icon_48.jpg" },
   "permissions": [ "notifications" ],
   "background_page": "background.html",
   "content_scripts": [
