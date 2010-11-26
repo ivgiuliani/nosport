@@ -1,9 +1,6 @@
 <html>
   <script>
     function notification(message) {
-      // disabled, I need a design decision about this
-      return;
-
       var notification = webkitNotifications.createNotification(
         chrome.extension.getURL("icon_48.jpg"),
         "No Sport!", message
