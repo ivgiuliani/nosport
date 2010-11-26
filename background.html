@@ -1,9 +1,9 @@
 <html>
   <script>
-    function notification(title, message) {
+    function hide_notification(website) {
       var notification = webkitNotifications.createNotification(
         chrome.extension.getURL("icon_48.png"),
-        title, message
+        website, "I hid sport content!"
       );
       notification.show();
 
@@ -14,9 +14,8 @@
 
     chrome.extension.onRequest.addListener(
     function(request, sender, sendResponse) {
-      console.log(request);
-      if (request.title && request.message) {
-        notification(request.title, request.message);
+      if (request.type == "hidcontent") {
+        hide_notification(request.website)
       }
     });
   </script>

@@ -14,7 +14,7 @@ for (var i = 0; i < items.length; i++) {
 
 if (hidden > 0) {
 	chrome.extension.sendRequest({
-		"title": "www.ansa.it",
-		"message": "I hid sport content!"
+		"type": "hidcontent",
+		"website": "www.ansa.it"
 	});
 }

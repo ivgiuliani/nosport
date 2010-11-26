@@ -8,15 +8,15 @@
   "content_scripts": [
     {
       "matches": ["http://*.corriere.it/*" ],
-      "js": ["jquery.js", "filter_corriere.js"]
+      "js": ["jquery.js", "filters/corriere.js"]
     },
     {
       "matches": ["http://*.repubblica.it/*" ],
-      "js": ["jquery.js", "filter_repubblica.js"]
+      "js": ["jquery.js", "filters/repubblica.js"]
     },
     {
       "matches": ["http://*.ansa.it/*" ],
-      "js": ["jquery.js", "filter_ansa.js"]
+      "js": ["jquery.js", "filters/ansa.js"]
     }
   ]
 }
