@@ -1,9 +1,9 @@
 <html>
   <script>
-    function notification(message) {
+    function notification(title, message) {
       var notification = webkitNotifications.createNotification(
         chrome.extension.getURL("icon_48.png"),
-        "No Sport!", message
+        title, message
       );
       notification.show();
 
@@ -15,8 +15,8 @@
     chrome.extension.onRequest.addListener(
     function(request, sender, sendResponse) {
       console.log(request);
-      if (request.message) {
-        notification(request.message);
+      if (request.title && request.message) {
+        notification(request.title, request.message);
       }
     });
   </script>
