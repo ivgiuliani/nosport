@@ -17,6 +17,10 @@
     {
       "matches": ["http://*.ansa.it/*" ],
       "js": ["jquery.js", "filters/ansa.js"]
+    },
+    {
+      "matches": ["http://*.ultimahora.es/*" ],
+      "js": ["jquery.js", "filters/ultimahora.js"]
     }
   ]
 }
