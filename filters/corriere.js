@@ -15,7 +15,7 @@ $(document).ready(function() {
 		hidden = true;
 	}
 
-	if (item3 && item2.length > 0) {
+	if (item3 && item3.length > 0) {
 		item3 = item3.parent();
 		item3.hide();
 		hidden = true;
