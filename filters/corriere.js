@@ -2,13 +2,14 @@ $(document).ready(function() {
 	var item1 = $(".edizione-grafica:first");
 	var item2 = $(".tr-home-serie-a");
 	var item3 = $(".tr-home-champions");
+	var item4 = $(".minisport_player_container");
 	var hidden = false;
 	
 	if (item1 && item1.length > 0) {
 		item1.hide();
 		hidden = true;
 	}
-	
+
 	if (item2 && item2.length > 0) {
 		item2 = item2.parent();
 		item2.hide();
@@ -20,7 +21,12 @@ $(document).ready(function() {
 		item3.hide();
 		hidden = true;
 	}
-	
+
+	if (item4 && item4.length > 0) {
+		item4.hide();
+		hidden = true;
+	}
+
 	if (hidden) {
 		chrome.extension.sendRequest({
 			"type": "hidcontent",
