@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var item2 = $(".tr-home-serie-a");
 	var item3 = $(".tr-home-champions");
 	var item4 = $(".minisport_player_container");
+	var item5 = $("#soppalco-gol");
 	var hidden = false;
 	
 	if (item1 && item1.length > 0) {
@@ -24,6 +25,11 @@ $(document).ready(function() {
 
 	if (item4 && item4.length > 0) {
 		item4.hide();
+		hidden = true;
+	}
+
+	if (item5 && item5.length > 0) {
+		item5.hide();
 		hidden = true;
 	}
 
