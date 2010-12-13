@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// really, really need a better checklist
 	var item1 = $(".edizione-grafica:first");
 	var item2 = $(".tr-home-serie-a");
 	var item3 = $(".tr-home-champions");
@@ -31,6 +32,23 @@ $(document).ready(function() {
 	if (item5 && item5.length > 0) {
 		item5.hide();
 		hidden = true;
+	}
+
+	var smallbox = $("p.mini-head-small");
+	// use a dict so we can use the 'in' operator
+	var ignorelist = {"SERIE A": "",
+		                "CALCIOMERCATO": "",
+										"CHAMPIONS LEAGUE": ""};
+	if (smallbox && smallbox.length > 0) {
+		for (var item = 0; item < smallbox.length; item++) {
+			var c1 = $(smallbox[item]).html();
+			var c2 = $(smallbox[item]).find("a");
+			if (c2) c2 = c2.html();
+			if (c1 in ignorelist || c2 in ignorelist) {
+				hidden = true;
+				$(smallbox[item]).parent().hide();
+			}
+		}
 	}
 
 	if (hidden) {
