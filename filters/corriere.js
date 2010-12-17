@@ -38,6 +38,7 @@ $(document).ready(function() {
 	// use a dict so we can use the 'in' operator
 	var ignorelist = {"SERIE A": "",
 		                "CALCIOMERCATO": "",
+										"CALCIO": "",
 										"CHAMPIONS LEAGUE": ""};
 	if (smallbox && smallbox.length > 0) {
 		for (var item = 0; item < smallbox.length; item++) {
