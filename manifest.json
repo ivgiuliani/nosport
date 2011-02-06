@@ -25,6 +25,10 @@
     {
       "matches": ["http://*.guardian.co.uk/*" ],
       "js": ["jquery.js", "filters/guardian.js"]
+    },
+    {
+      "matches": ["http://*.elmundo.es/*" ],
+      "js": ["jquery.js", "filters/elmundo.js"]
     }
   ]
 }
