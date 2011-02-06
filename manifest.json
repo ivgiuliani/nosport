@@ -21,6 +21,10 @@
     {
       "matches": ["http://*.ultimahora.es/*" ],
       "js": ["jquery.js", "filters/ultimahora.js"]
+    },
+    {
+      "matches": ["http://*.guardian.co.uk/*" ],
+      "js": ["jquery.js", "filters/guardian.js"]
     }
   ]
 }
